@@ -177,27 +177,48 @@ export const MOCK_TAMIL: AnalysisResult = {
 // ----- SAMPLE COLLECTION FOR QUICK SWITCHER -----
 export const SAMPLE_DOCS = [
   {
-    id: "genuine",
-    name: "Genuine Certificate",
+    id: "genuine_marksheet",
+    name: "Genuine Marksheet",
     description: "Clean document, no tampering",
     thumbnail_url: "https://placehold.co/200x200/437a22/white?text=✓",
     type: "genuine" as const,
+    format: "PDF",
     data: MOCK_GENUINE
   },
   {
-    id: "tampered",
+    id: "tampered_marksheet",
     name: "Tampered Marksheet",
     description: "Edited marks and seal",
     thumbnail_url: "https://placehold.co/200x200/a12c7b/white?text=⚠",
     type: "tampered" as const,
+    format: "JPG",
     data: MOCK_TAMPERED_MARKS
   },
   {
-    id: "tamil",
+    id: "genuine_cert",
+    name: "Genuine Certificate",
+    description: "Authentic certificate",
+    thumbnail_url: "https://placehold.co/200x200/437a22/white?text=✓",
+    type: "genuine" as const,
+    format: "PDF",
+    data: MOCK_GENUINE
+  },
+  {
+    id: "tampered_cert",
+    name: "Tampered Certificate",
+    description: "Altered certificate",
+    thumbnail_url: "https://placehold.co/200x200/a12c7b/white?text=⚠",
+    type: "tampered" as const,
+    format: "JPG",
+    data: MOCK_TAMPERED_MARKS
+  },
+  {
+    id: "tamil_cert",
     name: "Tamil Certificate",
-    description: "Regional language doc",
+    description: "Regional language document",
     thumbnail_url: "https://placehold.co/200x200/da7101/white?text=த",
     type: "genuine" as const,
+    format: "PDF",
     data: MOCK_TAMIL
   }
 ];

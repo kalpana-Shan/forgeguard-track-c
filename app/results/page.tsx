@@ -5,7 +5,7 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { AnalysisResult, SuspiciousRegion } from "@/types";
 import { MOCK_GENUINE, MOCK_TAMPERED_MARKS, MOCK_TAMIL } from "@/lib/mockData";
-import { getSampleAnalysis } from "@/lib/api";
+import { getSampleAnalysis, analyzeDocument } from "@/lib/api";
 
 // ====== PREMIUM CONFIDENCE RING ======
 const ConfidenceRing = ({ score }: { score: number }) => {
@@ -174,35 +174,78 @@ function ResultsContent() {
   const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
-    const mockId = searchParams.get("mock");
-    
-    async function fetchAnalysis() {
-      try {
-        setLoading(true);
-        let data: AnalysisResult;
-        
+  const mockId = searchParams.get("mock");
+  const uploadedFileData = sessionStorage.getItem("uploadedFileData");
+  
+  async function fetchAnalysis() {
+    try {
+      setLoading(true);
+      let data: AnalysisResult;
+      
+      // PRIORITY 1: Real uploaded file → Call actual backend
+      if (uploadedFileData && !mockId) {
         try {
-          if (mockId) {
-            data = await getSampleAnalysis(mockId);
+          const fileName = sessionStorage.getItem("uploadedFileName") || "upload.jpg";
+          const fileType = sessionStorage.getItem("uploadedFileType") || "image/jpeg";
+          
+          // Convert base64 back to File
+          const response = await fetch(uploadedFileData);
+          const blob = await response.blob();
+          const file = new File([blob], fileName, { type: fileType });
+          
+          // Call real backend API
+          const { analyzeDocument } = await import('@/lib/api');
+          data = await analyzeDocument(file);
+          
+          console.log('✅ Real API success!');
+          
+          // Clear storage after successful analysis
+          sessionStorage.removeItem("uploadedFileData");
+          sessionStorage.removeItem("uploadedFileName");
+          sessionStorage.removeItem("uploadedFileType");
+        } catch (apiError) {
+          console.warn('⚠️ Backend unavailable, using fallback:', apiError);
+          // Fallback to simulation
+          data = {
+            ...MOCK_TAMPERED_MARKS,
+            document_id: `upload-${Date.now()}`,
+            officer_summary: "Uploaded document analyzed in fallback mode. Backend connection unavailable."
+          };
+        }
+      } 
+      // PRIORITY 2: Sample from backend (mock param present)
+      else if (mockId) {
+        try {
+          data = await getSampleAnalysis(mockId);
+          console.log('✅ Sample fetched from backend:', mockId);
+        } catch {
+          console.warn('⚠️ Sample API failed, using local mock');
+          // Fallback to local mock data based on ID
+          if (mockId.includes("genuine")) {
+            data = MOCK_GENUINE;
+          } else if (mockId.includes("tamil")) {
+            data = MOCK_TAMIL;
           } else {
             data = MOCK_TAMPERED_MARKS;
           }
-        } catch {
-          if (mockId === "genuine") data = MOCK_GENUINE;
-          else if (mockId === "tamil") data = MOCK_TAMIL;
-          else data = MOCK_TAMPERED_MARKS;
         }
-        
-        setResult(data);
-      } catch {
-        setResult(MOCK_TAMPERED_MARKS);
-      } finally {
-        setLoading(false);
       }
+      // PRIORITY 3: Default fallback
+      else {
+        data = MOCK_TAMPERED_MARKS;
+      }
+      
+      setResult(data);
+    } catch (error) {
+      console.error("Analysis failed:", error);
+      setResult(MOCK_TAMPERED_MARKS);
+    } finally {
+      setLoading(false);
     }
-    
-    fetchAnalysis();
-  }, [searchParams]);
+  }
+  
+  fetchAnalysis();
+}, [searchParams]);
 
   const getVerdictStyle = (verdict: string) => {
     switch (verdict) {
