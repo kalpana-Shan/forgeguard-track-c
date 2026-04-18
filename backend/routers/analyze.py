@@ -12,6 +12,7 @@ router = APIRouter(prefix="/api", tags=["analyze"])
 
 ALLOWED_TYPES = {"image/jpeg", "image/png", "application/pdf"}
 
+
 @router.post("/analyze")
 async def analyze_document(file: UploadFile = File(...)):
     if file.content_type not in ALLOWED_TYPES:
@@ -23,6 +24,11 @@ async def analyze_document(file: UploadFile = File(...)):
 
     # Process first page only for now
     page_meta = intake["pages"][0]
+    
+    # ADD format_type and original_filename to page_meta
+    page_meta["format_type"] = intake["format_type"]  # ← ADD THIS
+    page_meta["original_filename"] = intake["original_filename"]  # ← ADD THIS
+    
     img_path = page_meta["image_path"]
     img = cv2.imread(img_path)
     h, w = img.shape[:2]

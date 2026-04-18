@@ -69,9 +69,15 @@ def build_report(doc_id, score_result, text_flags, image_hotspots, clone_flags, 
 
     ocr_out = [{"text": r["text"], "box": r["box"], "confidence": r["confidence"], "language": r["language"]} for r in ocr_regions]
 
+    # Get format_type and original_filename from page_meta (with defaults)
+    format_type = page_meta.get("format_type", "image")
+    original_filename = page_meta.get("original_filename", "unknown")
+
     return {
         "document_id": doc_id,
         "status": "analyzed",
+        "format_type": format_type,  # ← ADDED: "pdf" or "image"
+        "original_filename": original_filename,  # ← ADDED
         "verdict": score_result["verdict"],
         "confidence_score": score_result["confidence_score"],
         "verdict_label": score_result["verdict_label"],
@@ -84,4 +90,47 @@ def build_report(doc_id, score_result, text_flags, image_hotspots, clone_flags, 
             "suspicious_regions": suspicious_regions,
             "ocr_regions": ocr_out
         }]
+    }
+
+
+def build_multipage_report(doc_id, all_page_results, score_result, top_reasons, officer_summary):
+    """
+    Builds a report for multi-page documents.
+    
+    Args:
+        doc_id: Document ID
+        all_page_results: List of results from each page
+        score_result: Overall score result dict
+        top_reasons: List of top reasons across all pages
+        officer_summary: Overall officer summary string
+    
+    Returns:
+        dict: Complete report with multi-page structure
+    """
+    pages_output = []
+    for page_result in all_page_results:
+        pages_output.append({
+            "page_number": page_result["page_number"],
+            "preview_image_url": page_result["preview_image_url"],
+            "ela_heatmap_url": page_result["ela_heatmap_url"],
+            "suspicious_regions": page_result["suspicious_regions"],
+            "ocr_regions": page_result["ocr_regions"]
+        })
+    
+    # Get format_type and original_filename from first page (consistent across all pages)
+    format_type = all_page_results[0].get("page_meta", {}).get("format_type", "image") if all_page_results else "image"
+    original_filename = all_page_results[0].get("page_meta", {}).get("original_filename", "unknown") if all_page_results else "unknown"
+
+    return {
+        "document_id": doc_id,
+        "status": "analyzed",
+        "format_type": format_type,  # ← ADDED
+        "original_filename": original_filename,  # ← ADDED
+        "verdict": score_result["verdict"],
+        "confidence_score": score_result["confidence_score"],
+        "verdict_label": score_result["verdict_label"],
+        "top_reasons": top_reasons if top_reasons else ["No significant anomalies detected"],
+        "officer_summary": officer_summary,
+        "total_pages_analyzed": len(pages_output),
+        "pages": pages_output
     }

@@ -1,0 +1,3301 @@
+{
+  "document_id": "2e63c0ec",
+  "status": "analyzed",
+  "format_type": "pdf",
+  "original_filename": "tampered_marksheet.pdf",
+  "verdict": "REVIEW_NEEDED",
+  "confidence_score": 0.643,
+  "verdict_label": "Review Needed",
+  "top_reasons": [
+    "OCR confidence 0.33 is unusually low in Unknown field",
+    "OCR confidence 0.34 is unusually low in Unknown field",
+    "OCR confidence 0.18 is unusually low in Unknown field"
+  ],
+  "officer_summary": "Some inconsistencies found (confidence: 64%). Manual spot-check recommended before accepting this document.",
+  "pages": [
+    {
+      "page_number": 1,
+      "preview_image_url": "/uploads/uploads\\2e63c0ec_page1.jpg",
+      "ela_heatmap_url": "/overlays/overlays\\2e63c0ec_page1_ela.jpg",
+      "suspicious_regions": [
+        {
+          "region_id": "r1",
+          "box": {
+            "x": 151,
+            "y": 681,
+            "w": 10,
+            "h": 14
+          },
+          "type": "text_tamper",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.33 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r2",
+          "box": {
+            "x": 151,
+            "y": 643,
+            "w": 10,
+            "h": 14
+          },
+          "type": "text_tamper",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.43 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r3",
+          "box": {
+            "x": 151,
+            "y": 568,
+            "w": 10,
+            "h": 52
+          },
+          "type": "text_tamper",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.4 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r4",
+          "box": {
+            "x": 151,
+            "y": 478,
+            "w": 10,
+            "h": 63
+          },
+          "type": "text_tamper",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.34 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r5",
+          "box": {
+            "x": 151,
+            "y": 399,
+            "w": 10,
+            "h": 63
+          },
+          "type": "text_tamper",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.18 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r6",
+          "box": {
+            "x": 1025,
+            "y": 187,
+            "w": 44,
+            "h": 15
+          },
+          "type": "text_tamper",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.02 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r7",
+          "box": {
+            "x": 1083,
+            "y": 187,
+            "w": 41,
+            "h": 15
+          },
+          "type": "text_tamper",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "OCR confidence 0.04 is unusually low in Unknown field",
+          "language": "en"
+        },
+        {
+          "region_id": "r8",
+          "box": {
+            "x": 1016,
+            "y": 300,
+            "w": 6,
+            "h": 2
+          },
+          "type": "text_tamper",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text height in Unknown differs significantly from same-row text",
+          "language": "en"
+        },
+        {
+          "region_id": "r9",
+          "box": {
+            "x": 151,
+            "y": 568,
+            "w": 10,
+            "h": 52
+          },
+          "type": "text_tamper",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text height in Unknown differs significantly from same-row text",
+          "language": "en"
+        },
+        {
+          "region_id": "r10",
+          "box": {
+            "x": 151,
+            "y": 478,
+            "w": 10,
+            "h": 63
+          },
+          "type": "text_tamper",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text height in Unknown differs significantly from same-row text",
+          "language": "en"
+        },
+        {
+          "region_id": "r11",
+          "box": {
+            "x": 151,
+            "y": 399,
+            "w": 10,
+            "h": 63
+          },
+          "type": "text_tamper",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text height in Unknown differs significantly from same-row text",
+          "language": "en"
+        },
+        {
+          "region_id": "r12",
+          "box": {
+            "x": 1025,
+            "y": 187,
+            "w": 44,
+            "h": 15
+          },
+          "type": "text_tamper",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "Text regions overlap — possible overwritten field near Unknown",
+          "language": "en"
+        },
+        {
+          "region_id": "r13",
+          "box": {
+            "x": 1056,
+            "y": 680,
+            "w": 32,
+            "h": 17
+          },
+          "type": "image_artifact",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "ELA detected compression anomaly (intensity 96.06) — possible pasted region",
+          "language": "en"
+        },
+        {
+          "region_id": "r14",
+          "box": {
+            "x": 288,
+            "y": 99,
+            "w": 90,
+            "h": 21
+          },
+          "type": "image_artifact",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "ELA detected compression anomaly (intensity 92.61) — possible pasted region",
+          "language": "en"
+        },
+        {
+          "region_id": "r15",
+          "box": {
+            "x": 1037,
+            "y": 600,
+            "w": 51,
+            "h": 24
+          },
+          "type": "image_artifact",
+          "severity": "high",
+          "field_label": "Unknown",
+          "reason": "ELA detected compression anomaly (intensity 91.5) — possible pasted region",
+          "language": "en"
+        },
+        {
+          "region_id": "r16",
+          "box": {
+            "x": 192,
+            "y": 0,
+            "w": 64,
+            "h": 64
+          },
+          "type": "image_artifact",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Repeated texture block — possible copy-move editing",
+          "language": "en"
+        },
+        {
+          "region_id": "r17",
+          "box": {
+            "x": 256,
+            "y": 0,
+            "w": 64,
+            "h": 64
+          },
+          "type": "image_artifact",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Repeated texture block — possible copy-move editing",
+          "language": "en"
+        },
+        {
+          "region_id": "r18",
+          "box": {
+            "x": 320,
+            "y": 0,
+            "w": 64,
+            "h": 64
+          },
+          "type": "image_artifact",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Repeated texture block — possible copy-move editing",
+          "language": "en"
+        },
+        {
+          "region_id": "r19",
+          "box": {
+            "x": 151,
+            "y": 568,
+            "w": 10,
+            "h": 52
+          },
+          "type": "layout_anomaly",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text baseline misalignment in row — possible replaced text near Unknown",
+          "language": "en"
+        },
+        {
+          "region_id": "r20",
+          "box": {
+            "x": 151,
+            "y": 478,
+            "w": 10,
+            "h": 63
+          },
+          "type": "layout_anomaly",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text baseline misalignment in row — possible replaced text near Unknown",
+          "language": "en"
+        },
+        {
+          "region_id": "r21",
+          "box": {
+            "x": 151,
+            "y": 399,
+            "w": 10,
+            "h": 63
+          },
+          "type": "layout_anomaly",
+          "severity": "medium",
+          "field_label": "Unknown",
+          "reason": "Text baseline misalignment in row — possible replaced text near Unknown",
+          "language": "en"
+        }
+      ],
+      "ocr_regions": [
+        {
+          "text": "NEHRU",
+          "box": {
+            "x": 292,
+            "y": 103,
+            "w": 80,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "INSTITUTE",
+          "box": {
+            "x": 381,
+            "y": 103,
+            "w": 123,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "OF",
+          "box": {
+            "x": 513,
+            "y": 103,
+            "w": 31,
+            "h": 15
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "ENGINEERING",
+          "box": {
+            "x": 552,
+            "y": 103,
+            "w": 160,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "AND",
+          "box": {
+            "x": 721,
+            "y": 103,
+            "w": 47,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "TECHNOLOGY",
+          "box": {
+            "x": 777,
+            "y": 103,
+            "w": 160,
+            "h": 15
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "(Autonomous)",
+          "box": {
+            "x": 538,
+            "y": 129,
+            "w": 153,
+            "h": 19
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Approved",
+          "box": {
+            "x": 323,
+            "y": 170,
+            "w": 70,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "by",
+          "box": {
+            "x": 399,
+            "y": 170,
+            "w": 17,
+            "h": 14
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "AICTE,",
+          "box": {
+            "x": 421,
+            "y": 171,
+            "w": 51,
+            "h": 12
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "New",
+          "box": {
+            "x": 478,
+            "y": 171,
+            "w": 29,
+            "h": 10
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Delhi&",
+          "box": {
+            "x": 513,
+            "y": 170,
+            "w": 50,
+            "h": 11
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "Recognized",
+          "box": {
+            "x": 569,
+            "y": 170,
+            "w": 83,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "by",
+          "box": {
+            "x": 660,
+            "y": 170,
+            "w": 17,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "UGC",
+          "box": {
+            "x": 682,
+            "y": 171,
+            "w": 31,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "with",
+          "box": {
+            "x": 719,
+            "y": 170,
+            "w": 33,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Section",
+          "box": {
+            "x": 758,
+            "y": 170,
+            "w": 55,
+            "h": 11
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "2(f)",
+          "box": {
+            "x": 819,
+            "y": 170,
+            "w": 24,
+            "h": 14
+          },
+          "confidence": 0.83,
+          "language": "en"
+        },
+        {
+          "text": "&",
+          "box": {
+            "x": 848,
+            "y": 171,
+            "w": 11,
+            "h": 10
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "12(B)",
+          "box": {
+            "x": 867,
+            "y": 170,
+            "w": 36,
+            "h": 14
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "Re-accredited",
+          "box": {
+            "x": 342,
+            "y": 190,
+            "w": 100,
+            "h": 10
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "by",
+          "box": {
+            "x": 449,
+            "y": 190,
+            "w": 17,
+            "h": 13
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "NAAC",
+          "box": {
+            "x": 472,
+            "y": 190,
+            "w": 40,
+            "h": 10
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "“A+”,",
+          "box": {
+            "x": 518,
+            "y": 189,
+            "w": 39,
+            "h": 13
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": "NBA",
+          "box": {
+            "x": 563,
+            "y": 190,
+            "w": 30,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Accredited",
+          "box": {
+            "x": 599,
+            "y": 190,
+            "w": 79,
+            "h": 10
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "(UG",
+          "box": {
+            "x": 685,
+            "y": 190,
+            "w": 25,
+            "h": 13
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "Courses):",
+          "box": {
+            "x": 716,
+            "y": 190,
+            "w": 66,
+            "h": 13
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "AERO",
+          "box": {
+            "x": 794,
+            "y": 190,
+            "w": 43,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "|",
+          "box": {
+            "x": 846,
+            "y": 190,
+            "w": 2,
+            "h": 13
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "CSE",
+          "box": {
+            "x": 856,
+            "y": 190,
+            "w": 30,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Register",
+          "box": {
+            "x": 105,
+            "y": 266,
+            "w": 73,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "No",
+          "box": {
+            "x": 184,
+            "y": 267,
+            "w": 24,
+            "h": 14
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": ":",
+          "box": {
+            "x": 216,
+            "y": 271,
+            "w": 2,
+            "h": 10
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "721423244047",
+          "box": {
+            "x": 226,
+            "y": 267,
+            "w": 126,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Date",
+          "box": {
+            "x": 105,
+            "y": 292,
+            "w": 40,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "of",
+          "box": {
+            "x": 152,
+            "y": 291,
+            "w": 18,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Birth",
+          "box": {
+            "x": 175,
+            "y": 291,
+            "w": 45,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": ":",
+          "box": {
+            "x": 228,
+            "y": 296,
+            "w": 2,
+            "h": 10
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "25-12-2005",
+          "box": {
+            "x": 237,
+            "y": 292,
+            "w": 96,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Degree",
+          "box": {
+            "x": 105,
+            "y": 319,
+            "w": 62,
+            "h": 19
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "-",
+          "box": {
+            "x": 174,
+            "y": 327,
+            "w": 5,
+            "h": 2
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Branch",
+          "box": {
+            "x": 185,
+            "y": 318,
+            "w": 65,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": ":",
+          "box": {
+            "x": 257,
+            "y": 323,
+            "w": 3,
+            "h": 10
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "B.Tech.",
+          "box": {
+            "x": 267,
+            "y": 318,
+            "w": 63,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "-",
+          "box": {
+            "x": 337,
+            "y": 327,
+            "w": 5,
+            "h": 2
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "COMPUTER",
+          "box": {
+            "x": 348,
+            "y": 319,
+            "w": 105,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SCIENCE",
+          "box": {
+            "x": 459,
+            "y": 319,
+            "w": 78,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "AND",
+          "box": {
+            "x": 543,
+            "y": 319,
+            "w": 41,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "BUSINESS",
+          "box": {
+            "x": 591,
+            "y": 319,
+            "w": 90,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SYSTEMS",
+          "box": {
+            "x": 687,
+            "y": 319,
+            "w": 83,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SEMESTER",
+          "box": {
+            "x": 105,
+            "y": 346,
+            "w": 103,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "4",
+          "box": {
+            "x": 151,
+            "y": 372,
+            "w": 10,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": ">",
+          "box": {
+            "x": 151,
+            "y": 681,
+            "w": 10,
+            "h": 14
+          },
+          "confidence": 0.33,
+          "language": "en"
+        },
+        {
+          "text": "PF",
+          "box": {
+            "x": 151,
+            "y": 643,
+            "w": 10,
+            "h": 14
+          },
+          "confidence": 0.43,
+          "language": "en"
+        },
+        {
+          "text": "ee",
+          "box": {
+            "x": 151,
+            "y": 568,
+            "w": 10,
+            "h": 52
+          },
+          "confidence": 0.4,
+          "language": "en"
+        },
+        {
+          "text": "eee",
+          "box": {
+            "x": 151,
+            "y": 478,
+            "w": 10,
+            "h": 63
+          },
+          "confidence": 0.34,
+          "language": "en"
+        },
+        {
+          "text": "ee",
+          "box": {
+            "x": 151,
+            "y": 399,
+            "w": 10,
+            "h": 63
+          },
+          "confidence": 0.18,
+          "language": "en"
+        },
+        {
+          "text": "SUB-CODE",
+          "box": {
+            "x": 265,
+            "y": 346,
+            "w": 99,
+            "h": 14
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": "U23CW403",
+          "box": {
+            "x": 264,
+            "y": 372,
+            "w": 100,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "U23CW404",
+          "box": {
+            "x": 264,
+            "y": 399,
+            "w": 101,
+            "h": 14
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "U23CW405",
+          "box": {
+            "x": 264,
+            "y": 424,
+            "w": 100,
+            "h": 14
+          },
+          "confidence": 0.87,
+          "language": "en"
+        },
+        {
+          "text": "U23CW406",
+          "box": {
+            "x": 264,
+            "y": 451,
+            "w": 100,
+            "h": 14
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "U23CW417",
+          "box": {
+            "x": 264,
+            "y": 478,
+            "w": 100,
+            "h": 14
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": "U23CW418",
+          "box": {
+            "x": 264,
+            "y": 504,
+            "w": 100,
+            "h": 14
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "U23GE401",
+          "box": {
+            "x": 267,
+            "y": 531,
+            "w": 94,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "U23L0402",
+          "box": {
+            "x": 267,
+            "y": 568,
+            "w": 94,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "U23MC401",
+          "box": {
+            "x": 265,
+            "y": 606,
+            "w": 98,
+            "h": 14
+          },
+          "confidence": 0.88,
+          "language": "en"
+        },
+        {
+          "text": "U23SEC41",
+          "box": {
+            "x": 268,
+            "y": 643,
+            "w": 92,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "U23VEC48",
+          "box": {
+            "x": 267,
+            "y": 681,
+            "w": 95,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "*",
+          "box": {
+            "x": 105,
+            "y": 729,
+            "w": 8,
+            "h": 8
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "RA:",
+          "box": {
+            "x": 119,
+            "y": 730,
+            "w": 35,
+            "h": 14
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": "Re-appearance.",
+          "box": {
+            "x": 161,
+            "y": 730,
+            "w": 139,
+            "h": 19
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": "“Nehru",
+          "box": {
+            "x": 371,
+            "y": 210,
+            "w": 51,
+            "h": 10
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "Gardens”,",
+          "box": {
+            "x": 427,
+            "y": 210,
+            "w": 71,
+            "h": 12
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Thirumalayampalayam,",
+          "box": {
+            "x": 506,
+            "y": 210,
+            "w": 172,
+            "h": 13
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": "Coimbatore",
+          "box": {
+            "x": 687,
+            "y": 210,
+            "w": 84,
+            "h": 10
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "-",
+          "box": {
+            "x": 778,
+            "y": 215,
+            "w": 7,
+            "h": 2
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "641",
+          "box": {
+            "x": 792,
+            "y": 210,
+            "w": 26,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "105.",
+          "box": {
+            "x": 827,
+            "y": 210,
+            "w": 30,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "End",
+          "box": {
+            "x": 455,
+            "y": 239,
+            "w": 37,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Semester",
+          "box": {
+            "x": 498,
+            "y": 240,
+            "w": 90,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Examination",
+          "box": {
+            "x": 593,
+            "y": 239,
+            "w": 125,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Result",
+          "box": {
+            "x": 724,
+            "y": 239,
+            "w": 61,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Name",
+          "box": {
+            "x": 678,
+            "y": 267,
+            "w": 52,
+            "h": 14
+          },
+          "confidence": 0.91,
+          "language": "en"
+        },
+        {
+          "text": ":KALPANA",
+          "box": {
+            "x": 738,
+            "y": 268,
+            "w": 92,
+            "h": 13
+          },
+          "confidence": 0.88,
+          "language": "en"
+        },
+        {
+          "text": "S",
+          "box": {
+            "x": 837,
+            "y": 268,
+            "w": 11,
+            "h": 13
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "An",
+          "box": {
+            "x": 250,
+            "y": 154,
+            "w": 20,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "ISO",
+          "box": {
+            "x": 275,
+            "y": 154,
+            "w": 26,
+            "h": 10
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "9001:2015",
+          "box": {
+            "x": 306,
+            "y": 153,
+            "w": 80,
+            "h": 11
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "&ISO",
+          "box": {
+            "x": 392,
+            "y": 154,
+            "w": 37,
+            "h": 10
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "14001:2015",
+          "box": {
+            "x": 437,
+            "y": 153,
+            "w": 88,
+            "h": 11
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "Certified",
+          "box": {
+            "x": 531,
+            "y": 153,
+            "w": 64,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Institution,",
+          "box": {
+            "x": 601,
+            "y": 153,
+            "w": 84,
+            "h": 13
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Affiliated",
+          "box": {
+            "x": 692,
+            "y": 153,
+            "w": 68,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "to",
+          "box": {
+            "x": 766,
+            "y": 154,
+            "w": 15,
+            "h": 10
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Anna",
+          "box": {
+            "x": 787,
+            "y": 154,
+            "w": 37,
+            "h": 10
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "University,",
+          "box": {
+            "x": 830,
+            "y": 153,
+            "w": 80,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "Chennai",
+          "box": {
+            "x": 918,
+            "y": 153,
+            "w": 59,
+            "h": 11
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "00",
+          "box": {
+            "x": 1045,
+            "y": 117,
+            "w": 51,
+            "h": 30
+          },
+          "confidence": 0.6,
+          "language": "en"
+        },
+        {
+          "text": "HRU",
+          "box": {
+            "x": 1044,
+            "y": 187,
+            "w": 27,
+            "h": 7
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "GROUP",
+          "box": {
+            "x": 1077,
+            "y": 187,
+            "w": 46,
+            "h": 7
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SENSU",
+          "box": {
+            "x": 1025,
+            "y": 187,
+            "w": 44,
+            "h": 15
+          },
+          "confidence": 0.02,
+          "language": "en"
+        },
+        {
+          "text": "Tons",
+          "box": {
+            "x": 1083,
+            "y": 187,
+            "w": 41,
+            "h": 15
+          },
+          "confidence": 0.04,
+          "language": "en"
+        },
+        {
+          "text": "Month",
+          "box": {
+            "x": 678,
+            "y": 291,
+            "w": 59,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "&",
+          "box": {
+            "x": 744,
+            "y": 292,
+            "w": 13,
+            "h": 14
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Year",
+          "box": {
+            "x": 762,
+            "y": 292,
+            "w": 41,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "of",
+          "box": {
+            "x": 809,
+            "y": 291,
+            "w": 19,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Examinations",
+          "box": {
+            "x": 832,
+            "y": 291,
+            "w": 125,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": ":",
+          "box": {
+            "x": 964,
+            "y": 296,
+            "w": 3,
+            "h": 10
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "APR",
+          "box": {
+            "x": 973,
+            "y": 292,
+            "w": 38,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "-",
+          "box": {
+            "x": 1016,
+            "y": 300,
+            "w": 6,
+            "h": 2
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "2025",
+          "box": {
+            "x": 1028,
+            "y": 292,
+            "w": 41,
+            "h": 14
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "TITLE",
+          "box": {
+            "x": 595,
+            "y": 346,
+            "w": 57,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "OF",
+          "box": {
+            "x": 659,
+            "y": 346,
+            "w": 25,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PAPER",
+          "box": {
+            "x": 690,
+            "y": 346,
+            "w": 64,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "DATABASE",
+          "box": {
+            "x": 421,
+            "y": 372,
+            "w": 103,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "MANAGEMENT",
+          "box": {
+            "x": 530,
+            "y": 372,
+            "w": 148,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SYSTEMS",
+          "box": {
+            "x": 683,
+            "y": 372,
+            "w": 88,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "HIGH",
+          "box": {
+            "x": 421,
+            "y": 399,
+            "w": 53,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SPEED",
+          "box": {
+            "x": 480,
+            "y": 399,
+            "w": 62,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "NETWORKS",
+          "box": {
+            "x": 548,
+            "y": 399,
+            "w": 113,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "OPEN",
+          "box": {
+            "x": 421,
+            "y": 424,
+            "w": 54,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SOURCE",
+          "box": {
+            "x": 481,
+            "y": 424,
+            "w": 78,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "OPERATING",
+          "box": {
+            "x": 566,
+            "y": 424,
+            "w": 115,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SYSTEMS",
+          "box": {
+            "x": 688,
+            "y": 424,
+            "w": 87,
+            "h": 14
+          },
+          "confidence": 0.94,
+          "language": "en"
+        },
+        {
+          "text": "DATA",
+          "box": {
+            "x": 421,
+            "y": 451,
+            "w": 53,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SCIENCE",
+          "box": {
+            "x": 480,
+            "y": 451,
+            "w": 83,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "AND",
+          "box": {
+            "x": 569,
+            "y": 451,
+            "w": 43,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "ANALYTICS",
+          "box": {
+            "x": 618,
+            "y": 451,
+            "w": 113,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "DATABASE",
+          "box": {
+            "x": 421,
+            "y": 478,
+            "w": 103,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "MANAGEMENT",
+          "box": {
+            "x": 530,
+            "y": 478,
+            "w": 148,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SYSTEMS",
+          "box": {
+            "x": 683,
+            "y": 478,
+            "w": 88,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "LABORATORY",
+          "box": {
+            "x": 778,
+            "y": 478,
+            "w": 135,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "HIGH",
+          "box": {
+            "x": 421,
+            "y": 504,
+            "w": 53,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SPEED",
+          "box": {
+            "x": 480,
+            "y": 504,
+            "w": 62,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "NETWORKS",
+          "box": {
+            "x": 548,
+            "y": 504,
+            "w": 113,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "LABORATORY",
+          "box": {
+            "x": 668,
+            "y": 504,
+            "w": 135,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "ENVIRONMENTAL",
+          "box": {
+            "x": 421,
+            "y": 531,
+            "w": 175,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SCIENCES",
+          "box": {
+            "x": 603,
+            "y": 531,
+            "w": 94,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "AND",
+          "box": {
+            "x": 703,
+            "y": 531,
+            "w": 43,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SUSTAINABILITY",
+          "box": {
+            "x": 753,
+            "y": 531,
+            "w": 166,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "LINEAR",
+          "box": {
+            "x": 421,
+            "y": 556,
+            "w": 76,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "ALGEBRA",
+          "box": {
+            "x": 501,
+            "y": 556,
+            "w": 96,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "AND",
+          "box": {
+            "x": 602,
+            "y": 556,
+            "w": 43,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "OPTIMIZATION",
+          "box": {
+            "x": 652,
+            "y": 556,
+            "w": 149,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "TECHNIQUES",
+          "box": {
+            "x": 421,
+            "y": 579,
+            "w": 128,
+            "h": 19
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "WELL-BEING",
+          "box": {
+            "x": 421,
+            "y": 606,
+            "w": 126,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "WITH",
+          "box": {
+            "x": 553,
+            "y": 606,
+            "w": 56,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "TRADITIONAL",
+          "box": {
+            "x": 614,
+            "y": 606,
+            "w": 140,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PRACTICES",
+          "box": {
+            "x": 760,
+            "y": 606,
+            "w": 109,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "APTITUDE",
+          "box": {
+            "x": 420,
+            "y": 633,
+            "w": 101,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "AND",
+          "box": {
+            "x": 527,
+            "y": 633,
+            "w": 43,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "COMMUNICATION",
+          "box": {
+            "x": 577,
+            "y": 633,
+            "w": 177,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "FOR",
+          "box": {
+            "x": 760,
+            "y": 633,
+            "w": 40,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "ENGINEERS",
+          "box": {
+            "x": 806,
+            "y": 633,
+            "w": 114,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "11",
+          "box": {
+            "x": 421,
+            "y": 655,
+            "w": 25,
+            "h": 14
+          },
+          "confidence": 0.65,
+          "language": "en"
+        },
+        {
+          "text": "TOOLS",
+          "box": {
+            "x": 421,
+            "y": 681,
+            "w": 65,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "FOR",
+          "box": {
+            "x": 492,
+            "y": 681,
+            "w": 40,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "GRAPHIC",
+          "box": {
+            "x": 538,
+            "y": 681,
+            "w": 90,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "DESIGNING",
+          "box": {
+            "x": 634,
+            "y": 681,
+            "w": 113,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "The",
+          "box": {
+            "x": 104,
+            "y": 777,
+            "w": 36,
+            "h": 15
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "result",
+          "box": {
+            "x": 146,
+            "y": 777,
+            "w": 57,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "published",
+          "box": {
+            "x": 209,
+            "y": 777,
+            "w": 96,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "in",
+          "box": {
+            "x": 310,
+            "y": 777,
+            "w": 19,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "this",
+          "box": {
+            "x": 335,
+            "y": 777,
+            "w": 36,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "website",
+          "box": {
+            "x": 376,
+            "y": 777,
+            "w": 75,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "is",
+          "box": {
+            "x": 456,
+            "y": 777,
+            "w": 16,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "provisional",
+          "box": {
+            "x": 478,
+            "y": 777,
+            "w": 111,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "only.",
+          "box": {
+            "x": 595,
+            "y": 777,
+            "w": 44,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PROCEDURE",
+          "box": {
+            "x": 105,
+            "y": 823,
+            "w": 112,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "FOR",
+          "box": {
+            "x": 224,
+            "y": 823,
+            "w": 37,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "APPLYING",
+          "box": {
+            "x": 266,
+            "y": 823,
+            "w": 95,
+            "h": 14
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "TRANSPERENCY",
+          "box": {
+            "x": 367,
+            "y": 823,
+            "w": 149,
+            "h": 14
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "/",
+          "box": {
+            "x": 521,
+            "y": 823,
+            "w": 5,
+            "h": 16
+          },
+          "confidence": 0.89,
+          "language": "en"
+        },
+        {
+          "text": "REVALUATION",
+          "box": {
+            "x": 532,
+            "y": 823,
+            "w": 134,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "OF",
+          "box": {
+            "x": 672,
+            "y": 823,
+            "w": 24,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "ANSWER",
+          "box": {
+            "x": 702,
+            "y": 823,
+            "w": 83,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SCRIPTS",
+          "box": {
+            "x": 791,
+            "y": 823,
+            "w": 74,
+            "h": 14
+          },
+          "confidence": 0.95,
+          "language": "en"
+        },
+        {
+          "text": "Students",
+          "box": {
+            "x": 105,
+            "y": 845,
+            "w": 78,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "can",
+          "box": {
+            "x": 189,
+            "y": 849,
+            "w": 32,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "apply",
+          "box": {
+            "x": 227,
+            "y": 845,
+            "w": 50,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 283,
+            "y": 845,
+            "w": 26,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Transparency/Revaluation",
+          "box": {
+            "x": 315,
+            "y": 845,
+            "w": 242,
+            "h": 20
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "of",
+          "box": {
+            "x": 563,
+            "y": 845,
+            "w": 19,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "answer",
+          "box": {
+            "x": 587,
+            "y": 849,
+            "w": 66,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "scripts",
+          "box": {
+            "x": 659,
+            "y": 845,
+            "w": 59,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "in",
+          "box": {
+            "x": 724,
+            "y": 845,
+            "w": 18,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "the",
+          "box": {
+            "x": 748,
+            "y": 845,
+            "w": 28,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "prescribed",
+          "box": {
+            "x": 782,
+            "y": 845,
+            "w": 98,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "format",
+          "box": {
+            "x": 886,
+            "y": 845,
+            "w": 62,
+            "h": 15
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "(T",
+          "box": {
+            "x": 954,
+            "y": 846,
+            "w": 17,
+            "h": 16
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "Form",
+          "box": {
+            "x": 977,
+            "y": 846,
+            "w": 48,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 1031,
+            "y": 845,
+            "w": 26,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Transparency",
+          "box": {
+            "x": 104,
+            "y": 868,
+            "w": 127,
+            "h": 19
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "/",
+          "box": {
+            "x": 236,
+            "y": 868,
+            "w": 5,
+            "h": 16
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "R",
+          "box": {
+            "x": 247,
+            "y": 868,
+            "w": 12,
+            "h": 14
+          },
+          "confidence": 0.9,
+          "language": "en"
+        },
+        {
+          "text": "Form",
+          "box": {
+            "x": 265,
+            "y": 868,
+            "w": 48,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 319,
+            "y": 867,
+            "w": 26,
+            "h": 15
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "Revaluation)",
+          "box": {
+            "x": 351,
+            "y": 867,
+            "w": 115,
+            "h": 17
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "through",
+          "box": {
+            "x": 473,
+            "y": 867,
+            "w": 73,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "their",
+          "box": {
+            "x": 552,
+            "y": 867,
+            "w": 43,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "mentor.",
+          "box": {
+            "x": 601,
+            "y": 869,
+            "w": 71,
+            "h": 13
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Students",
+          "box": {
+            "x": 105,
+            "y": 890,
+            "w": 78,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "who",
+          "box": {
+            "x": 189,
+            "y": 890,
+            "w": 38,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "wish",
+          "box": {
+            "x": 233,
+            "y": 890,
+            "w": 43,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "to",
+          "box": {
+            "x": 282,
+            "y": 892,
+            "w": 17,
+            "h": 13
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "apply",
+          "box": {
+            "x": 306,
+            "y": 890,
+            "w": 50,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 361,
+            "y": 890,
+            "w": 27,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Revaluation",
+          "box": {
+            "x": 394,
+            "y": 890,
+            "w": 109,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "should",
+          "box": {
+            "x": 510,
+            "y": 890,
+            "w": 60,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "first",
+          "box": {
+            "x": 575,
+            "y": 890,
+            "w": 37,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "apply",
+          "box": {
+            "x": 618,
+            "y": 890,
+            "w": 50,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 674,
+            "y": 890,
+            "w": 26,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Transparency",
+          "box": {
+            "x": 706,
+            "y": 891,
+            "w": 126,
+            "h": 19
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "by",
+          "box": {
+            "x": 838,
+            "y": 890,
+            "w": 21,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "paying",
+          "box": {
+            "x": 865,
+            "y": 890,
+            "w": 62,
+            "h": 20
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Rs.300/-",
+          "box": {
+            "x": 932,
+            "y": 891,
+            "w": 69,
+            "h": 16
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "and",
+          "box": {
+            "x": 1007,
+            "y": 890,
+            "w": 34,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Revaluation",
+          "box": {
+            "x": 105,
+            "y": 912,
+            "w": 109,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "by",
+          "box": {
+            "x": 220,
+            "y": 912,
+            "w": 21,
+            "h": 20
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "paying",
+          "box": {
+            "x": 247,
+            "y": 912,
+            "w": 61,
+            "h": 20
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Rs.400/-",
+          "box": {
+            "x": 314,
+            "y": 913,
+            "w": 69,
+            "h": 16
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "per",
+          "box": {
+            "x": 389,
+            "y": 916,
+            "w": 30,
+            "h": 16
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "script",
+          "box": {
+            "x": 425,
+            "y": 912,
+            "w": 51,
+            "h": 20
+          },
+          "confidence": 0.97,
+          "language": "en"
+        },
+        {
+          "text": "within",
+          "box": {
+            "x": 482,
+            "y": 912,
+            "w": 59,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "SEVEN",
+          "box": {
+            "x": 547,
+            "y": 913,
+            "w": 63,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "DAYS",
+          "box": {
+            "x": 616,
+            "y": 913,
+            "w": 50,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "from",
+          "box": {
+            "x": 672,
+            "y": 912,
+            "w": 45,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "the",
+          "box": {
+            "x": 723,
+            "y": 912,
+            "w": 28,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "date",
+          "box": {
+            "x": 758,
+            "y": 912,
+            "w": 38,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "of",
+          "box": {
+            "x": 802,
+            "y": 912,
+            "w": 19,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "publication",
+          "box": {
+            "x": 825,
+            "y": 912,
+            "w": 104,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "of",
+          "box": {
+            "x": 935,
+            "y": 912,
+            "w": 19,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "results.",
+          "box": {
+            "x": 958,
+            "y": 912,
+            "w": 65,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Students",
+          "box": {
+            "x": 105,
+            "y": 935,
+            "w": 78,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "can",
+          "box": {
+            "x": 189,
+            "y": 939,
+            "w": 32,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "apply",
+          "box": {
+            "x": 227,
+            "y": 935,
+            "w": 50,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 283,
+            "y": 935,
+            "w": 26,
+            "h": 15
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "Transparency/Revaluation",
+          "box": {
+            "x": 315,
+            "y": 935,
+            "w": 242,
+            "h": 20
+          },
+          "confidence": 0.93,
+          "language": "en"
+        },
+        {
+          "text": "of",
+          "box": {
+            "x": 563,
+            "y": 935,
+            "w": 19,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "answer",
+          "box": {
+            "x": 587,
+            "y": 939,
+            "w": 66,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "scripts",
+          "box": {
+            "x": 659,
+            "y": 935,
+            "w": 59,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "not",
+          "box": {
+            "x": 725,
+            "y": 937,
+            "w": 29,
+            "h": 13
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "exceeding",
+          "box": {
+            "x": 760,
+            "y": 935,
+            "w": 91,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "5",
+          "box": {
+            "x": 857,
+            "y": 936,
+            "w": 9,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "courses",
+          "box": {
+            "x": 873,
+            "y": 939,
+            "w": 68,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "at",
+          "box": {
+            "x": 947,
+            "y": 937,
+            "w": 17,
+            "h": 13
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "a",
+          "box": {
+            "x": 970,
+            "y": 939,
+            "w": 9,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "time.",
+          "box": {
+            "x": 985,
+            "y": 935,
+            "w": 45,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "Transparency/Revaluation",
+          "box": {
+            "x": 104,
+            "y": 957,
+            "w": 242,
+            "h": 20
+          },
+          "confidence": 0.92,
+          "language": "en"
+        },
+        {
+          "text": "can",
+          "box": {
+            "x": 353,
+            "y": 961,
+            "w": 31,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "be",
+          "box": {
+            "x": 390,
+            "y": 957,
+            "w": 21,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "applied",
+          "box": {
+            "x": 418,
+            "y": 957,
+            "w": 67,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "only",
+          "box": {
+            "x": 491,
+            "y": 957,
+            "w": 39,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "for",
+          "box": {
+            "x": 536,
+            "y": 957,
+            "w": 27,
+            "h": 15
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "theory",
+          "box": {
+            "x": 568,
+            "y": 957,
+            "w": 60,
+            "h": 20
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "courses.",
+          "box": {
+            "x": 634,
+            "y": 961,
+            "w": 72,
+            "h": 11
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "GRADE",
+          "box": {
+            "x": 949,
+            "y": 346,
+            "w": 68,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "RESULT",
+          "box": {
+            "x": 1049,
+            "y": 346,
+            "w": 75,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 372,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 399,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 424,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 451,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 478,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 504,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 531,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 568,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 606,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 643,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        },
+        {
+          "text": "PASS",
+          "box": {
+            "x": 1038,
+            "y": 681,
+            "w": 47,
+            "h": 14
+          },
+          "confidence": 0.96,
+          "language": "en"
+        }
+      ]
+    }
+  ]
+}

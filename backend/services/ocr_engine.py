@@ -3,8 +3,8 @@ import cv2
 import numpy as np
 from PIL import Image
 
-# Windows only — uncomment and set your path:
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# Windows — set your Tesseract path (UNCOMMENTED)
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 FIELD_KEYWORDS = {
     "Name":      ["name", "பெயர்"],
@@ -25,15 +25,24 @@ def detect_field_label(text: str, y: int, img_height: int) -> str:
 
 def run_ocr(image_path: str) -> list:
     img = cv2.imread(image_path)
+    if img is None:
+        print(f"Error: Could not read image at {image_path}")
+        return []
+    
     h, w = img.shape[:2]
 
     # Run Tesseract with English + Tamil
     pil_img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-    data = pytesseract.image_to_data(
-        pil_img,
-        lang="eng+tam",
-        output_type=pytesseract.Output.DICT
-    )
+    
+    try:
+        data = pytesseract.image_to_data(
+            pil_img,
+            lang="eng+tam",
+            output_type=pytesseract.Output.DICT
+        )
+    except Exception as e:
+        print(f"Tesseract error: {e}")
+        return []
 
     ocr_regions = []
     n = len(data["text"])
@@ -43,13 +52,18 @@ def run_ocr(image_path: str) -> list:
             continue
 
         conf_raw = data["conf"][i]
-        conf = max(0.0, float(conf_raw) / 100.0)  # Tesseract gives 0–100
+        # Handle -1 confidence (Tesseract gives -1 for some detections)
+        if conf_raw == -1:
+            conf = 0.0
+        else:
+            conf = max(0.0, min(1.0, float(conf_raw) / 100.0))
 
         x = int(data["left"][i])
         y = int(data["top"][i])
         bw = int(data["width"][i])
         bh = int(data["height"][i])
 
+        # Detect Tamil characters (Unicode range 0B80-0BFF)
         lang = "ta" if any('\u0B80' <= c <= '\u0BFF' for c in text) else "en"
 
         ocr_regions.append({
