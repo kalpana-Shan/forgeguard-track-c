@@ -10,70 +10,61 @@ CRITICAL_FIELDS = {"Marks", "Name", "ID", "Date", "Seal/Signature", "Seal", "Sig
 
 SEVERITY_SCORE = {"high": 1.0, "medium": 0.55, "low": 0.25}
 
-def compute_score(
-    text_flags: list,
-    image_hotspots: list,
-    clone_flags: list,
-    layout_flags: list,
-    ocr_regions: list
-) -> dict:
+def compute_score(text_flags, image_hotspots, clone_flags, layout_flags, ocr_regions) -> dict:
+    score = 0.0
 
-    # --- Text tamper sub-score ---
-    text_score = min(1.0, sum(f.get("score_contribution", 0.3) for f in text_flags) / 2)
+    # --- Text tamper score (weight: 30%) ---
+    # Only count HIGH severity flags, not medium noise
+    high_text = [f for f in text_flags if f.get("severity") == "high"]
+    medium_text = [f for f in text_flags if f.get("severity") == "medium"]
+    text_score = min(1.0, (len(high_text) * 0.25) + (len(medium_text) * 0.08))
+    score += text_score * 0.30
 
-    # --- Image forensic sub-score ---
-    hotspot_score = min(1.0, len(image_hotspots) * 0.25)
+    # --- ELA hotspot score (weight: 25%) ---
+    # Only count hotspots with HIGH intensity — ignore low noise
+    strong_hotspots = [h for h in image_hotspots if h.get("intensity", 0) > 80]
+    ela_score = min(1.0, len(strong_hotspots) * 0.30)
+    score += ela_score * 0.25
+
+    # --- Clone detection score (weight: 20%) ---
     clone_score = min(1.0, len(clone_flags) * 0.35)
-    image_score = min(1.0, (hotspot_score + clone_score) / 2)
+    score += clone_score * 0.20
 
-    # --- Layout sub-score ---
-    layout_score = min(1.0, sum(f.get("score_contribution", 0.2) for f in layout_flags) / 1.5)
+    # --- Layout anomaly score (weight: 15%) ---
+    high_layout = [f for f in layout_flags if f.get("severity") == "high"]
+    layout_score = min(1.0, len(high_layout) * 0.25)
+    score += layout_score * 0.15
 
-    # --- OCR instability sub-score ---
+    # --- OCR average confidence bonus (weight: 10%) ---
+    # If overall OCR confidence is high, REDUCE the score (document is clean)
     if ocr_regions:
-        low_conf = [r for r in ocr_regions if r["confidence"] < 0.50]
-        ocr_score = min(1.0, len(low_conf) / max(len(ocr_regions), 1))
-    else:
-        ocr_score = 0.0
+        avg_conf = sum(r["confidence"] for r in ocr_regions) / len(ocr_regions)
+        if avg_conf > 0.75:
+            score = max(0.0, score - 0.12)   # High confidence = reduce tamper score
+        elif avg_conf > 0.60:
+            score = max(0.0, score - 0.05)
 
-    # --- Critical field multiplier ---
-    all_flags = text_flags + layout_flags
-    critical_hit = any(
-        f.get("region", {}).get("field_label", "") in CRITICAL_FIELDS
-        for f in all_flags
-    )
-    critical_score = 1.0 if critical_hit else 0.0
+    score = round(min(score, 1.0), 3)
 
-    # --- Weighted final score ---
-    final = (
-        text_score     * WEIGHTS["text_tamper"] +
-        image_score    * WEIGHTS["image_forensic"] +
-        layout_score   * WEIGHTS["layout_anomaly"] +
-        ocr_score      * WEIGHTS["ocr_instability"] +
-        critical_score * WEIGHTS["critical_field"]
-    )
-    final = round(min(1.0, final), 3)
-
-    # --- Verdict ---
-    if final < 0.35:
+    # Verdict thresholds
+    if score < 0.30:
         verdict = "GENUINE"
-        label = "Likely Genuine"
-    elif final < 0.65:
+        verdict_label = "Likely Genuine"
+    elif score < 0.60:
         verdict = "REVIEW_NEEDED"
-        label = "Review Needed"
+        verdict_label = "Needs Review"
     else:
         verdict = "HIGH_TAMPER_RISK"
-        label = "High Tamper Risk"
+        verdict_label = "High Tamper Risk"
 
     return {
-        "confidence_score": final,
+        "confidence_score": round(score * 100),
         "verdict": verdict,
-        "verdict_label": label,
-        "subscores": {
-            "text_tamper": round(text_score, 3),
-            "image_forensic": round(image_score, 3),
-            "layout_anomaly": round(layout_score, 3),
-            "ocr_instability": round(ocr_score, 3),
-            "critical_field": round(critical_score, 3)
+        "verdict_label": verdict_label,
+        "breakdown": {
+            "text_tamper": round(text_score * 100),
+            "ela_hotspots": round(ela_score * 100),
+            "clone_detection": round(clone_score * 100),
+            "layout_anomaly": round(layout_score * 100)
         }
     }

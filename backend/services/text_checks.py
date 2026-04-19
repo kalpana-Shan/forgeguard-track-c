@@ -11,13 +11,14 @@ def check_text_tampering(ocr_regions: list) -> list:
     avg_conf = np.mean(confidences)
 
     for r in ocr_regions:
-        if r["confidence"] < avg_conf * 0.55 and r["confidence"] < 0.60:
+        # CHANGED: 0.55 → 0.40, and 0.60 → 0.45 (stricter threshold)
+        if r["confidence"] < avg_conf * 0.40 and r["confidence"] < 0.45:
             flags.append({
                 "region": r,
                 "check": "low_ocr_confidence",
                 "reason": f"OCR confidence {round(r['confidence'],2)} is unusually low in {r['field_label']} field",
-                "severity": "high" if r["confidence"] < 0.40 else "medium",
-                "score_contribution": 0.7 if r["confidence"] < 0.40 else 0.4
+                "severity": "high" if r["confidence"] < 0.30 else "medium",  # Also adjusted severity threshold
+                "score_contribution": 0.7 if r["confidence"] < 0.30 else 0.4
             })
 
     # --- Check 2: Bounding box height inconsistency in same row ---

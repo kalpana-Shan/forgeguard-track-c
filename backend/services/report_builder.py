@@ -76,13 +76,14 @@ def build_report(doc_id, score_result, text_flags, image_hotspots, clone_flags, 
     return {
         "document_id": doc_id,
         "status": "analyzed",
-        "format_type": format_type,  # ← ADDED: "pdf" or "image"
-        "original_filename": original_filename,  # ← ADDED
+        "format_type": format_type,
+        "original_filename": original_filename,
         "verdict": score_result["verdict"],
         "confidence_score": score_result["confidence_score"],
         "verdict_label": score_result["verdict_label"],
         "top_reasons": top_reasons if top_reasons else ["No significant anomalies detected"],
         "officer_summary": officer_summary,
+        "breakdown": score_result.get("breakdown", {}),  # ← ADDED THIS LINE
         "pages": [{
             "page_number": page_meta["page_number"],
             "preview_image_url": f"/uploads/{page_meta['image_path'].split('/')[-1]}",
@@ -124,13 +125,14 @@ def build_multipage_report(doc_id, all_page_results, score_result, top_reasons, 
     return {
         "document_id": doc_id,
         "status": "analyzed",
-        "format_type": format_type,  # ← ADDED
-        "original_filename": original_filename,  # ← ADDED
+        "format_type": format_type,
+        "original_filename": original_filename,
         "verdict": score_result["verdict"],
         "confidence_score": score_result["confidence_score"],
         "verdict_label": score_result["verdict_label"],
         "top_reasons": top_reasons if top_reasons else ["No significant anomalies detected"],
         "officer_summary": officer_summary,
+        "breakdown": score_result.get("breakdown", {}),  # ← ADDED THIS LINE
         "total_pages_analyzed": len(pages_output),
         "pages": pages_output
     }
