@@ -1,22 +1,28 @@
 {
-  "document_id": "f6935f16",
+  "document_id": "a810a4d6",
   "status": "analyzed",
   "format_type": "pdf",
   "original_filename": "genuine_marksheet.pdf",
-  "verdict": "REVIEW_NEEDED",
-  "confidence_score": 0.643,
-  "verdict_label": "Review Needed",
+  "verdict": "HIGH_TAMPER_RISK",
+  "confidence_score": 63,
+  "verdict_label": "High Tamper Risk",
   "top_reasons": [
     "OCR confidence 0.15 is unusually low in Unknown field",
     "OCR confidence 0.24 is unusually low in Unknown field",
     "OCR confidence 0.29 is unusually low in Unknown field"
   ],
-  "officer_summary": "Some inconsistencies found (confidence: 64%). Manual spot-check recommended before accepting this document.",
+  "officer_summary": "High risk of tampering detected (confidence: 6300%). Manual verification strongly recommended. Do not accept without physical verification.",
+  "breakdown": {
+    "text_tamper": 100,
+    "ela_hotspots": 100,
+    "clone_detection": 100,
+    "layout_anomaly": 0
+  },
   "pages": [
     {
       "page_number": 1,
-      "preview_image_url": "/uploads/uploads\\f6935f16_page1.jpg",
-      "ela_heatmap_url": "/overlays/overlays\\f6935f16_page1_ela.jpg",
+      "preview_image_url": "/uploads/uploads\\a810a4d6_page1.jpg",
+      "ela_heatmap_url": "/overlays/overlays\\a810a4d6_page1_ela.jpg",
       "suspicious_regions": [
         {
           "region_id": "r1",
@@ -35,20 +41,6 @@
         {
           "region_id": "r2",
           "box": {
-            "x": 127,
-            "y": 172,
-            "w": 70,
-            "h": 12
-          },
-          "type": "text_tamper",
-          "severity": "medium",
-          "field_label": "Unknown",
-          "reason": "OCR confidence 0.44 is unusually low in Unknown field",
-          "language": "ta"
-        },
-        {
-          "region_id": "r3",
-          "box": {
             "x": 117,
             "y": 187,
             "w": 91,
@@ -61,7 +53,7 @@
           "language": "ta"
         },
         {
-          "region_id": "r4",
+          "region_id": "r3",
           "box": {
             "x": 1025,
             "y": 186,
@@ -75,7 +67,7 @@
           "language": "ta"
         },
         {
-          "region_id": "r5",
+          "region_id": "r4",
           "box": {
             "x": 264,
             "y": 451,
@@ -89,7 +81,7 @@
           "language": "en"
         },
         {
-          "region_id": "r6",
+          "region_id": "r5",
           "box": {
             "x": 316,
             "y": 451,
@@ -103,7 +95,7 @@
           "language": "en"
         },
         {
-          "region_id": "r7",
+          "region_id": "r6",
           "box": {
             "x": 416,
             "y": 629,
@@ -117,7 +109,7 @@
           "language": "en"
         },
         {
-          "region_id": "r8",
+          "region_id": "r7",
           "box": {
             "x": 468,
             "y": 629,
@@ -131,7 +123,7 @@
           "language": "en"
         },
         {
-          "region_id": "r9",
+          "region_id": "r8",
           "box": {
             "x": 970,
             "y": 643,
@@ -145,7 +137,7 @@
           "language": "en"
         },
         {
-          "region_id": "r10",
+          "region_id": "r9",
           "box": {
             "x": 117,
             "y": 187,
@@ -159,7 +151,7 @@
           "language": "ta"
         },
         {
-          "region_id": "r11",
+          "region_id": "r10",
           "box": {
             "x": 1025,
             "y": 186,
@@ -173,7 +165,7 @@
           "language": "ta"
         },
         {
-          "region_id": "r12",
+          "region_id": "r11",
           "box": {
             "x": 778,
             "y": 214,
@@ -187,7 +179,7 @@
           "language": "en"
         },
         {
-          "region_id": "r13",
+          "region_id": "r12",
           "box": {
             "x": 1016,
             "y": 300,
@@ -201,7 +193,7 @@
           "language": "en"
         },
         {
-          "region_id": "r14",
+          "region_id": "r13",
           "box": {
             "x": 264,
             "y": 395,
@@ -215,7 +207,7 @@
           "language": "en"
         },
         {
-          "region_id": "r15",
+          "region_id": "r14",
           "box": {
             "x": 264,
             "y": 500,
@@ -229,7 +221,7 @@
           "language": "en"
         },
         {
-          "region_id": "r16",
+          "region_id": "r15",
           "box": {
             "x": 421,
             "y": 564,
@@ -243,7 +235,7 @@
           "language": "en"
         },
         {
-          "region_id": "r17",
+          "region_id": "r16",
           "box": {
             "x": 416,
             "y": 629,
@@ -257,7 +249,7 @@
           "language": "en"
         },
         {
-          "region_id": "r18",
+          "region_id": "r17",
           "box": {
             "x": 468,
             "y": 629,
@@ -271,7 +263,7 @@
           "language": "en"
         },
         {
-          "region_id": "r19",
+          "region_id": "r18",
           "box": {
             "x": 151,
             "y": 568,
@@ -285,7 +277,7 @@
           "language": "en"
         },
         {
-          "region_id": "r20",
+          "region_id": "r19",
           "box": {
             "x": 915,
             "y": 151,
@@ -299,7 +291,7 @@
           "language": "en"
         },
         {
-          "region_id": "r21",
+          "region_id": "r20",
           "box": {
             "x": 1023,
             "y": 184,
@@ -313,7 +305,7 @@
           "language": "en"
         },
         {
-          "region_id": "r22",
+          "region_id": "r21",
           "box": {
             "x": 248,
             "y": 149,
@@ -327,7 +319,7 @@
           "language": "en"
         },
         {
-          "region_id": "r23",
+          "region_id": "r22",
           "box": {
             "x": 192,
             "y": 0,
@@ -341,7 +333,7 @@
           "language": "en"
         },
         {
-          "region_id": "r24",
+          "region_id": "r23",
           "box": {
             "x": 256,
             "y": 0,
@@ -355,7 +347,7 @@
           "language": "en"
         },
         {
-          "region_id": "r25",
+          "region_id": "r24",
           "box": {
             "x": 320,
             "y": 0,
@@ -369,7 +361,7 @@
           "language": "en"
         },
         {
-          "region_id": "r26",
+          "region_id": "r25",
           "box": {
             "x": 1072,
             "y": 113,
@@ -383,7 +375,7 @@
           "language": "ta"
         },
         {
-          "region_id": "r27",
+          "region_id": "r26",
           "box": {
             "x": 472,
             "y": 190,
@@ -397,7 +389,7 @@
           "language": "en"
         },
         {
-          "region_id": "r28",
+          "region_id": "r27",
           "box": {
             "x": 151,
             "y": 568,

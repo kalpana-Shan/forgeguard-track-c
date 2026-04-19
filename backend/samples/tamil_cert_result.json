@@ -1,22 +1,28 @@
 {
-  "document_id": "7ea4feb4",
+  "document_id": "21f830b2",
   "status": "analyzed",
   "format_type": "image",
   "original_filename": "tamil_cert.jpeg",
-  "verdict": "REVIEW_NEEDED",
-  "confidence_score": 0.565,
-  "verdict_label": "Review Needed",
+  "verdict": "HIGH_TAMPER_RISK",
+  "confidence_score": 63,
+  "verdict_label": "High Tamper Risk",
   "top_reasons": [
     "OCR confidence 0.23 is unusually low in Unknown field",
     "OCR confidence 0.09 is unusually low in Unknown field",
     "OCR confidence 0.15 is unusually low in Unknown field"
   ],
-  "officer_summary": "Some inconsistencies found (confidence: 56%). Manual spot-check recommended before accepting this document.",
+  "officer_summary": "High risk of tampering detected (confidence: 6300%). Manual verification strongly recommended. Do not accept without physical verification.",
+  "breakdown": {
+    "text_tamper": 100,
+    "ela_hotspots": 100,
+    "clone_detection": 100,
+    "layout_anomaly": 0
+  },
   "pages": [
     {
       "page_number": 1,
-      "preview_image_url": "/uploads/uploads\\7ea4feb4_page1.jpg",
-      "ela_heatmap_url": "/overlays/overlays\\7ea4feb4_page1_ela.jpg",
+      "preview_image_url": "/uploads/uploads\\21f830b2_page1.jpg",
+      "ela_heatmap_url": "/overlays/overlays\\21f830b2_page1_ela.jpg",
       "suspicious_regions": [
         {
           "region_id": "r1",
@@ -83,27 +89,13 @@
             "h": 18
           },
           "type": "text_tamper",
-          "severity": "high",
+          "severity": "medium",
           "field_label": "Unknown",
           "reason": "OCR confidence 0.3 is unusually low in Unknown field",
           "language": "ta"
         },
         {
           "region_id": "r6",
-          "box": {
-            "x": 196,
-            "y": 498,
-            "w": 81,
-            "h": 31
-          },
-          "type": "text_tamper",
-          "severity": "high",
-          "field_label": "Unknown",
-          "reason": "OCR confidence 0.38 is unusually low in Unknown field",
-          "language": "ta"
-        },
-        {
-          "region_id": "r7",
           "box": {
             "x": 626,
             "y": 276,
@@ -117,7 +109,7 @@
           "language": "en"
         },
         {
-          "region_id": "r8",
+          "region_id": "r7",
           "box": {
             "x": 713,
             "y": 283,
@@ -131,7 +123,7 @@
           "language": "ta"
         },
         {
-          "region_id": "r9",
+          "region_id": "r8",
           "box": {
             "x": 594,
             "y": 377,
@@ -145,7 +137,7 @@
           "language": "en"
         },
         {
-          "region_id": "r10",
+          "region_id": "r9",
           "box": {
             "x": 0,
             "y": 878,
@@ -159,7 +151,7 @@
           "language": "en"
         },
         {
-          "region_id": "r11",
+          "region_id": "r10",
           "box": {
             "x": 445,
             "y": 316,
@@ -173,7 +165,7 @@
           "language": "en"
         },
         {
-          "region_id": "r12",
+          "region_id": "r11",
           "box": {
             "x": 465,
             "y": 415,
@@ -187,7 +179,7 @@
           "language": "en"
         },
         {
-          "region_id": "r13",
+          "region_id": "r12",
           "box": {
             "x": 192,
             "y": 0,
@@ -201,7 +193,7 @@
           "language": "en"
         },
         {
-          "region_id": "r14",
+          "region_id": "r13",
           "box": {
             "x": 256,
             "y": 0,
@@ -215,7 +207,7 @@
           "language": "en"
         },
         {
-          "region_id": "r15",
+          "region_id": "r14",
           "box": {
             "x": 320,
             "y": 0,

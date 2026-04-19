@@ -1,22 +1,28 @@
 {
-  "document_id": "2e63c0ec",
+  "document_id": "c3d96d38",
   "status": "analyzed",
   "format_type": "pdf",
   "original_filename": "tampered_marksheet.pdf",
-  "verdict": "REVIEW_NEEDED",
-  "confidence_score": 0.643,
-  "verdict_label": "Review Needed",
+  "verdict": "HIGH_TAMPER_RISK",
+  "confidence_score": 63,
+  "verdict_label": "High Tamper Risk",
   "top_reasons": [
-    "OCR confidence 0.33 is unusually low in Unknown field",
-    "OCR confidence 0.34 is unusually low in Unknown field",
-    "OCR confidence 0.18 is unusually low in Unknown field"
+    "OCR confidence 0.18 is unusually low in Unknown field",
+    "OCR confidence 0.02 is unusually low in Unknown field",
+    "OCR confidence 0.04 is unusually low in Unknown field"
   ],
-  "officer_summary": "Some inconsistencies found (confidence: 64%). Manual spot-check recommended before accepting this document.",
+  "officer_summary": "High risk of tampering detected (confidence: 6300%). Manual verification strongly recommended. Do not accept without physical verification.",
+  "breakdown": {
+    "text_tamper": 100,
+    "ela_hotspots": 100,
+    "clone_detection": 100,
+    "layout_anomaly": 0
+  },
   "pages": [
     {
       "page_number": 1,
-      "preview_image_url": "/uploads/uploads\\2e63c0ec_page1.jpg",
-      "ela_heatmap_url": "/overlays/overlays\\2e63c0ec_page1_ela.jpg",
+      "preview_image_url": "/uploads/uploads\\c3d96d38_page1.jpg",
+      "ela_heatmap_url": "/overlays/overlays\\c3d96d38_page1_ela.jpg",
       "suspicious_regions": [
         {
           "region_id": "r1",
@@ -27,7 +33,7 @@
             "h": 14
           },
           "type": "text_tamper",
-          "severity": "high",
+          "severity": "medium",
           "field_label": "Unknown",
           "reason": "OCR confidence 0.33 is unusually low in Unknown field",
           "language": "en"
@@ -36,46 +42,18 @@
           "region_id": "r2",
           "box": {
             "x": 151,
-            "y": 643,
-            "w": 10,
-            "h": 14
-          },
-          "type": "text_tamper",
-          "severity": "medium",
-          "field_label": "Unknown",
-          "reason": "OCR confidence 0.43 is unusually low in Unknown field",
-          "language": "en"
-        },
-        {
-          "region_id": "r3",
-          "box": {
-            "x": 151,
-            "y": 568,
-            "w": 10,
-            "h": 52
-          },
-          "type": "text_tamper",
-          "severity": "medium",
-          "field_label": "Unknown",
-          "reason": "OCR confidence 0.4 is unusually low in Unknown field",
-          "language": "en"
-        },
-        {
-          "region_id": "r4",
-          "box": {
-            "x": 151,
             "y": 478,
             "w": 10,
             "h": 63
           },
           "type": "text_tamper",
-          "severity": "high",
+          "severity": "medium",
           "field_label": "Unknown",
           "reason": "OCR confidence 0.34 is unusually low in Unknown field",
           "language": "en"
         },
         {
-          "region_id": "r5",
+          "region_id": "r3",
           "box": {
             "x": 151,
             "y": 399,
@@ -89,7 +67,7 @@
           "language": "en"
         },
         {
-          "region_id": "r6",
+          "region_id": "r4",
           "box": {
             "x": 1025,
             "y": 187,
@@ -103,7 +81,7 @@
           "language": "en"
         },
         {
-          "region_id": "r7",
+          "region_id": "r5",
           "box": {
             "x": 1083,
             "y": 187,
@@ -117,7 +95,7 @@
           "language": "en"
         },
         {
-          "region_id": "r8",
+          "region_id": "r6",
           "box": {
             "x": 1016,
             "y": 300,
@@ -131,7 +109,7 @@
           "language": "en"
         },
         {
-          "region_id": "r9",
+          "region_id": "r7",
           "box": {
             "x": 151,
             "y": 568,
@@ -145,7 +123,7 @@
           "language": "en"
         },
         {
-          "region_id": "r10",
+          "region_id": "r8",
           "box": {
             "x": 151,
             "y": 478,
@@ -159,7 +137,7 @@
           "language": "en"
         },
         {
-          "region_id": "r11",
+          "region_id": "r9",
           "box": {
             "x": 151,
             "y": 399,
@@ -173,7 +151,7 @@
           "language": "en"
         },
         {
-          "region_id": "r12",
+          "region_id": "r10",
           "box": {
             "x": 1025,
             "y": 187,
@@ -187,7 +165,7 @@
           "language": "en"
         },
         {
-          "region_id": "r13",
+          "region_id": "r11",
           "box": {
             "x": 1056,
             "y": 680,
@@ -201,7 +179,7 @@
           "language": "en"
         },
         {
-          "region_id": "r14",
+          "region_id": "r12",
           "box": {
             "x": 288,
             "y": 99,
@@ -215,7 +193,7 @@
           "language": "en"
         },
         {
-          "region_id": "r15",
+          "region_id": "r13",
           "box": {
             "x": 1037,
             "y": 600,
@@ -229,7 +207,7 @@
           "language": "en"
         },
         {
-          "region_id": "r16",
+          "region_id": "r14",
           "box": {
             "x": 192,
             "y": 0,
@@ -243,7 +221,7 @@
           "language": "en"
         },
         {
-          "region_id": "r17",
+          "region_id": "r15",
           "box": {
             "x": 256,
             "y": 0,
@@ -257,7 +235,7 @@
           "language": "en"
         },
         {
-          "region_id": "r18",
+          "region_id": "r16",
           "box": {
             "x": 320,
             "y": 0,
@@ -271,7 +249,7 @@
           "language": "en"
         },
         {
-          "region_id": "r19",
+          "region_id": "r17",
           "box": {
             "x": 151,
             "y": 568,
@@ -285,7 +263,7 @@
           "language": "en"
         },
         {
-          "region_id": "r20",
+          "region_id": "r18",
           "box": {
             "x": 151,
             "y": 478,
@@ -299,7 +277,7 @@
           "language": "en"
         },
         {
-          "region_id": "r21",
+          "region_id": "r19",
           "box": {
             "x": 151,
             "y": 399,
