@@ -1,28 +1,28 @@
 {
-  "document_id": "a810a4d6",
+  "document_id": "9eabe836",
   "status": "analyzed",
   "format_type": "pdf",
   "original_filename": "genuine_marksheet.pdf",
-  "verdict": "HIGH_TAMPER_RISK",
-  "confidence_score": 63,
-  "verdict_label": "High Tamper Risk",
+  "verdict": "LIKELY_GENUINE",
+  "confidence_score": 2,
+  "verdict_label": "Likely Genuine",
   "top_reasons": [
     "OCR confidence 0.15 is unusually low in Unknown field",
     "OCR confidence 0.24 is unusually low in Unknown field",
     "OCR confidence 0.29 is unusually low in Unknown field"
   ],
-  "officer_summary": "High risk of tampering detected (confidence: 6300%). Manual verification strongly recommended. Do not accept without physical verification.",
+  "officer_summary": "High risk of tampering detected (confidence: 200%). Manual verification strongly recommended. Do not accept without physical verification.",
   "breakdown": {
-    "text_tamper": 100,
-    "ela_hotspots": 100,
-    "clone_detection": 100,
+    "text_tamper": 30,
+    "ela_hotspots": 30,
+    "clone_detection": 30,
     "layout_anomaly": 0
   },
   "pages": [
     {
       "page_number": 1,
-      "preview_image_url": "/uploads/uploads\\a810a4d6_page1.jpg",
-      "ela_heatmap_url": "/overlays/overlays\\a810a4d6_page1_ela.jpg",
+      "preview_image_url": "/uploads/uploads\\9eabe836_page1.jpg",
+      "ela_heatmap_url": "/overlays/overlays\\9eabe836_page1_ela.jpg",
       "suspicious_regions": [
         {
           "region_id": "r1",
