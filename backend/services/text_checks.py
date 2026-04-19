@@ -11,18 +11,16 @@ def check_text_tampering(ocr_regions: list) -> list:
     avg_conf = np.mean(confidences)
 
     for r in ocr_regions:
-        # CHANGED: 0.55 → 0.40, and 0.60 → 0.45 (stricter threshold)
-        if r["confidence"] < avg_conf * 0.40 and r["confidence"] < 0.45:
+        if r["confidence"] < avg_conf * 0.35 and r["confidence"] < 0.35:
             flags.append({
                 "region": r,
                 "check": "low_ocr_confidence",
                 "reason": f"OCR confidence {round(r['confidence'],2)} is unusually low in {r['field_label']} field",
-                "severity": "high" if r["confidence"] < 0.30 else "medium",  # Also adjusted severity threshold
-                "score_contribution": 0.7 if r["confidence"] < 0.30 else 0.4
+                "severity": "high" if r["confidence"] < 0.25 else "medium",
+                "score_contribution": 0.7 if r["confidence"] < 0.25 else 0.4
             })
 
     # --- Check 2: Bounding box height inconsistency in same row ---
-    # Group regions by approximate y coordinate (same row = within 10px)
     rows = {}
     for r in ocr_regions:
         row_key = round(r["box"]["y"] / 10) * 10
@@ -43,15 +41,14 @@ def check_text_tampering(ocr_regions: list) -> list:
                     "score_contribution": 0.35
                 })
 
-    # --- Check 3: Word spacing anomaly ---
+    # --- Check 3: Word spacing anomaly (text overlap = possible overwrite) ---
     for i in range(len(ocr_regions) - 1):
         r1 = ocr_regions[i]
         r2 = ocr_regions[i + 1]
-        # Only compare regions on same row
         if abs(r1["box"]["y"] - r2["box"]["y"]) > 15:
             continue
         gap = r2["box"]["x"] - (r1["box"]["x"] + r1["box"]["w"])
-        if gap < -5:  # Overlap — possible overwrite
+        if gap < -5:
             flags.append({
                 "region": r2,
                 "check": "text_overlap",
@@ -60,4 +57,14 @@ def check_text_tampering(ocr_regions: list) -> list:
                 "score_contribution": 0.65
             })
 
-    return flags
+    # --- Deduplicate: remove duplicate flags on the same region ---
+    seen_boxes = set()
+    unique_flags = []
+    for f in flags:
+        box = f["region"]["box"]
+        key = (box["x"] // 20, box["y"] // 20)
+        if key not in seen_boxes:
+            seen_boxes.add(key)
+            unique_flags.append(f)
+
+    return unique_flags          # ← MUST be inside the function, at this indentation level

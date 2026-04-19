@@ -51,5 +51,5 @@ def get_ela_hotspot_threshold(ela_gray: np.ndarray) -> int:
     """
     mean = float(np.mean(ela_gray))
     std = float(np.std(ela_gray))
-    threshold = int(mean + std * 1.5)
-    return max(30, min(threshold, 120))  # clamp between 30–120
+    threshold = int(mean + std * 2.5)
+    return max(50, min(threshold, 140)) 

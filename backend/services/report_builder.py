@@ -93,46 +93,67 @@ def build_report(doc_id, score_result, text_flags, image_hotspots, clone_flags, 
         }]
     }
 
-
-def build_multipage_report(doc_id, all_page_results, score_result, top_reasons, officer_summary):
-    """
-    Builds a report for multi-page documents.
-    
-    Args:
-        doc_id: Document ID
-        all_page_results: List of results from each page
-        score_result: Overall score result dict
-        top_reasons: List of top reasons across all pages
-        officer_summary: Overall officer summary string
-    
-    Returns:
-        dict: Complete report with multi-page structure
-    """
+def build_multipage_report(doc_id: str, score_result: dict, all_page_results: list) -> dict:
     pages_output = []
-    for page_result in all_page_results:
-        pages_output.append({
-            "page_number": page_result["page_number"],
-            "preview_image_url": page_result["preview_image_url"],
-            "ela_heatmap_url": page_result["ela_heatmap_url"],
-            "suspicious_regions": page_result["suspicious_regions"],
-            "ocr_regions": page_result["ocr_regions"]
-        })
-    
-    # Get format_type and original_filename from first page (consistent across all pages)
-    format_type = all_page_results[0].get("page_meta", {}).get("format_type", "image") if all_page_results else "image"
-    original_filename = all_page_results[0].get("page_meta", {}).get("original_filename", "unknown") if all_page_results else "unknown"
+    all_suspicious = []
+    all_reasons = []
+
+    for pr in all_page_results:
+        page_meta    = pr["page_meta"]
+        text_flags   = pr["text_flags"]
+        hotspots     = pr["ela_result"]["hotspots"]
+        clone_flags  = pr["clone_flags"]
+        layout_flags = pr["layout_flags"]
+        ocr_regions  = pr["ocr_regions"]
+        ela_result   = pr["ela_result"]
+
+        single = build_report(
+            doc_id, score_result,
+            text_flags, hotspots,
+            clone_flags, layout_flags,
+            ocr_regions, ela_result, page_meta
+        )
+
+        page_data = single["pages"][0]
+        pages_output.append(page_data)
+        all_suspicious += page_data.get("suspicious_regions", [])
+        all_reasons    += single.get("top_reasons", [])
+
+    # Deduplicate reasons, keep top 3
+    seen = set()
+    unique_reasons = []
+    for r in all_reasons:
+        if r not in seen:
+            seen.add(r)
+            unique_reasons.append(r)
+        if len(unique_reasons) == 3:
+            break
+
+    if not unique_reasons:
+        unique_reasons = ["No significant anomalies detected"]
+
+    # Generate officer summary from score
+    verdict = score_result["verdict"]
+    score   = score_result["confidence_score"]
+
+    if verdict == "LIKELY_GENUINE":
+        officer_summary = f"No significant anomalies detected across all pages. Document appears consistent and genuine."
+    elif verdict == "REVIEW_NEEDED":
+        officer_summary = f"Some inconsistencies found across document pages (confidence: {score}%). Manual spot-check recommended before acceptance."
+    else:
+        officer_summary = f"High risk of tampering detected across document (confidence: {score}%). Do not accept without physical verification."
 
     return {
         "document_id": doc_id,
         "status": "analyzed",
-        "format_type": format_type,
-        "original_filename": original_filename,
+        "format_type": all_page_results[0]["page_meta"].get("format_type", "pdf"),
+        "original_filename": all_page_results[0]["page_meta"].get("original_filename", ""),
         "verdict": score_result["verdict"],
         "confidence_score": score_result["confidence_score"],
         "verdict_label": score_result["verdict_label"],
-        "top_reasons": top_reasons if top_reasons else ["No significant anomalies detected"],
+        "breakdown": score_result.get("breakdown", {}),
+        "top_reasons": unique_reasons,
         "officer_summary": officer_summary,
-        "breakdown": score_result.get("breakdown", {}),  # ← ADDED THIS LINE
         "total_pages_analyzed": len(pages_output),
         "pages": pages_output
     }
