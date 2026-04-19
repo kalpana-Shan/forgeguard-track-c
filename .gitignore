@@ -1,5 +1,19 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ========== BACKEND (Python) ==========
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.env
+.venv
 
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ========== FRONTEND (React/Next.js) ==========
 # dependencies
 /node_modules
 /.pnp
@@ -39,3 +53,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ========== IDE & OS ==========
+.vscode/
+.idea/
+*.swp
+Thumbs.db
