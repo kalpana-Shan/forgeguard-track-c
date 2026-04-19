@@ -26,9 +26,9 @@ SAMPLES = {
     },
     "genuine_cert": {
         "label": "Genuine Certificate",
-        "filename": "genuine_cert.jpg",
+        "filename": "genuine_cert.jpeg",  # Changed from .jpg to .jpeg
         "filetype": "image",
-        "format_badge": "JPG",
+        "format_badge": "JPEG",
         "category": "certificate",
         "verdict_hint": "GENUINE",
         "description": "Original graduation certificate image — clean",
@@ -36,9 +36,9 @@ SAMPLES = {
     },
     "tampered_cert": {
         "label": "Tampered Certificate",
-        "filename": "tampered_cert.jpg",
+        "filename": "tampered_cert.png",  # Changed from .jpg to .png
         "filetype": "image",
-        "format_badge": "JPG",
+        "format_badge": "PNG",
         "category": "certificate",
         "verdict_hint": "HIGH_TAMPER_RISK",
         "description": "Seal copy-pasted and name overwritten",
@@ -46,9 +46,9 @@ SAMPLES = {
     },
     "tamil_cert": {
         "label": "Tamil Certificate",
-        "filename": "tamil_cert.pdf",
-        "filetype": "pdf",
-        "format_badge": "PDF",
+        "filename": "tamil_cert.jpeg",  # Changed from .pdf to .jpeg (since it's an image)
+        "filetype": "image",
+        "format_badge": "JPEG",
         "category": "certificate",
         "verdict_hint": "REVIEW_NEEDED",
         "description": "Tamil language graduation certificate",
@@ -72,7 +72,7 @@ def get_sample(sample_id: str):
             status_code=404,
             detail=f"Precomputed result missing. Run: POST /api/analyze with {SAMPLES[sample_id]['filename']}"
         )
-    with open(result_path) as f:
+    with open(result_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     # Inject sample metadata into response for frontend use
     data["sample_meta"] = SAMPLES[sample_id]

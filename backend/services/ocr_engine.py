@@ -2,6 +2,7 @@ import pytesseract
 import cv2
 import numpy as np
 from PIL import Image
+import os
 
 # Windows — set your Tesseract path (UNCOMMENTED)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -24,6 +25,20 @@ def detect_field_label(text: str, y: int, img_height: int) -> str:
     return "Unknown"
 
 def run_ocr(image_path: str) -> list:
+    # Fix: Handle .jpg vs .jpeg extension issues
+    if not os.path.exists(image_path):
+        # Try alternative extension
+        if image_path.endswith('.jpg'):
+            alt_path = image_path[:-4] + '.jpeg'
+            if os.path.exists(alt_path):
+                image_path = alt_path
+                print(f"Using alternative path: {image_path}")
+        elif image_path.endswith('.jpeg'):
+            alt_path = image_path[:-5] + '.jpg'
+            if os.path.exists(alt_path):
+                image_path = alt_path
+                print(f"Using alternative path: {image_path}")
+    
     img = cv2.imread(image_path)
     if img is None:
         print(f"Error: Could not read image at {image_path}")
@@ -73,5 +88,5 @@ def run_ocr(image_path: str) -> list:
             "language": lang,
             "field_label": detect_field_label(text, y, h)
         })
-
+    
     return ocr_regions

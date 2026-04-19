@@ -8,6 +8,29 @@ OVERLAY_DIR = "overlays"
 
 def run_ela(image_path: str, doc_id: str, page_num: int, quality: int = 75) -> dict:
     os.makedirs(OVERLAY_DIR, exist_ok=True)
+    
+    # Fix: Handle .jpg vs .jpeg extension issues
+    original_path = image_path
+    if not os.path.exists(image_path):
+        # Try alternative extension
+        if image_path.endswith('.jpg'):
+            alt_path = image_path[:-4] + '.jpeg'
+            if os.path.exists(alt_path):
+                image_path = alt_path
+                print(f"ELA using alternative path: {image_path}")
+        elif image_path.endswith('.jpeg'):
+            alt_path = image_path[:-5] + '.jpg'
+            if os.path.exists(alt_path):
+                image_path = alt_path
+                print(f"ELA using alternative path: {image_path}")
+    
+    # If still doesn't exist, try the original path
+    if not os.path.exists(image_path):
+        print(f"ELA Error: File not found at {original_path} or {image_path}")
+        return {
+            "heatmap_path": "",
+            "hotspots": []
+        }
 
     ela_diff = compute_ela_diff(image_path, quality)
     ela_amplified = normalize_ela(ela_diff, amplify=10)
@@ -44,7 +67,22 @@ def run_ela(image_path: str, doc_id: str, page_num: int, quality: int = 75) -> d
 
 # check_clone_patches stays exactly the same as before — no changes needed
 def check_clone_patches(image_path: str) -> list:
+    # Fix: Handle .jpg vs .jpeg extension issues
+    if not os.path.exists(image_path):
+        if image_path.endswith('.jpg'):
+            alt_path = image_path[:-4] + '.jpeg'
+            if os.path.exists(alt_path):
+                image_path = alt_path
+        elif image_path.endswith('.jpeg'):
+            alt_path = image_path[:-5] + '.jpg'
+            if os.path.exists(alt_path):
+                image_path = alt_path
+    
     img = cv2.imread(image_path)
+    if img is None:
+        print(f"Clone detection: Could not read image at {image_path}")
+        return []
+    
     h, w = img.shape[:2]
     block_size = 64
     blocks = {}

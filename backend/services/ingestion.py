@@ -23,7 +23,8 @@ def process_upload(file_bytes: bytes, filename: str) -> dict:
                 "page_number": i + 1,
                 "image_path": img_path,
                 "width": pix.width,
-                "height": pix.height
+                "height": pix.height,
+                "original_ext": "pdf"  # Track original extension
             })
         pages = pages[:2]  # max 2 pages for demo speed
         format_type = "pdf"
@@ -32,13 +33,21 @@ def process_upload(file_bytes: bytes, filename: str) -> dict:
         img_array = np.frombuffer(file_bytes, np.uint8)
         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
         h, w = img.shape[:2]
-        img_path = os.path.join(UPLOAD_DIR, f"{doc_id}_page1.jpg")
+        
+        # Preserve original extension for images (jpg, jpeg, png)
+        if ext in ['jpg', 'jpeg', 'png']:
+            img_path = os.path.join(UPLOAD_DIR, f"{doc_id}_page1.{ext}")
+        else:
+            # Default to jpg for unknown image formats
+            img_path = os.path.join(UPLOAD_DIR, f"{doc_id}_page1.jpg")
+        
         cv2.imwrite(img_path, img)
         pages.append({
             "page_number": 1,
             "image_path": img_path,
             "width": w,
-            "height": h
+            "height": h,
+            "original_ext": ext  # Track original extension
         })
         format_type = "image"
 
@@ -46,7 +55,7 @@ def process_upload(file_bytes: bytes, filename: str) -> dict:
         "document_id": doc_id,
         "pages": pages,
         "source_ext": ext,
-        "format_type": format_type,   # ← NEW: tells frontend what format was uploaded
+        "format_type": format_type,
         "total_pages": len(pages),
         "original_filename": filename
     }
